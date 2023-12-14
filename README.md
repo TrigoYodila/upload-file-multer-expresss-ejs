@@ -1,8 +1,8 @@
 ```
 # API upload image avec Node js (Express), Multer, ejs
 
-* initialiser le projet
-* `npm init`
+* Installer les dépendances
+* `npm init -y`
 
 
 ```
