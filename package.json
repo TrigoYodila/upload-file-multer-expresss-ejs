@@ -1,0 +1,20 @@
+{
+  "name": "upload-file-multer-node",
+  "version": "1.0.0",
+  "description": "```\r # API upload image avec Node js (Express), Multer, ejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrigoYodila/upload-file-multer-expresss-ejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TrigoYodila/upload-file-multer-expresss-ejs/issues"
+  },
+  "homepage": "https://github.com/TrigoYodila/upload-file-multer-expresss-ejs#readme"
+}
