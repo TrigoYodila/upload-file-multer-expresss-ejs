@@ -23,6 +23,20 @@ const stockage = multer.diskStorage({
 const upload = multer({storage:stockage})
 
 
+const personnes = [
+    {
+        nom:"Trigo",
+        image:"/data/uploads/alpha.jpg"
+    },
+    {
+        nom:"Romain",
+        image:"/data/uploads/beta.jpg"
+    }
+]
+
+//Rendre le dossier public static (pour accéder aux images via l'url)
+app.use(express.static(path.join(__dirname,"public")))
+
 //autoriser l'utilisation de l'extension html à la place de ejs aux fichiers de rendus
 app.engine("html", ejs.__express)
 
@@ -37,9 +51,16 @@ app.get('/', (req,res) => {
     res.render("index")
 })
 
-//route d'upload image
+//route d'upload image 
 app.post("/", upload.single("upload_file"), (req, res) => {
+   const nouvellePersonne = {
+    nom:req.body.nom,
+    image:"/data/uploads/"+ req.file.filename
+   }
+
+   personnes.push(nouvellePersonne)
     
+   
 })
 
 
