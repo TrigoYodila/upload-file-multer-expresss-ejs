@@ -48,7 +48,7 @@ app.set("view engine", "html")
 app.set("views", path.join(__dirname, "views"))
 
 app.get('/', (req,res) => {
-    res.render("index")
+    res.render("index", { personnes})
 })
 
 //route d'upload image 
@@ -59,6 +59,7 @@ app.post("/", upload.single("upload_file"), (req, res) => {
    }
 
    personnes.push(nouvellePersonne)
+   res.render("index", { personnes})
     
    
 })
